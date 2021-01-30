@@ -1,10 +1,19 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import NavBar from "../components/navbar/NavBar";
+
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import { useMediaQuery } from "@chakra-ui/react";
 
 export default function Home() {
 	return (
-		<div className="container bg-black">
-			<h1 className="text-white font-bold">hello</h1>
+		<div id="page-wrap">
+			<NavBar />
+			<Player
+				autoplay
+				loop
+				src="/mobile-technology-animation.json"
+				style={{ height: "300px", width: "300px" }}
+			/>
+			<div style={{ height: 400 }} />
 		</div>
 	);
 }
