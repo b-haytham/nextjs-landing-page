@@ -1,19 +1,23 @@
-import NavBar from "../components/navbar/NavBar";
+import classes from "../styles/Home.module.css";
 
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import { useMediaQuery } from "@chakra-ui/react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import {
+	Box,
+	Flex,
+	Heading,
+	useMediaQuery,
+	Spacer,
+	Text,
+	Button,
+} from "@chakra-ui/react";
+import Landing from "../components/Landing";
 
 export default function Home() {
+	const [isLargerThan764] = useMediaQuery("(min-width: 764px)");
+
 	return (
-		<div id="page-wrap">
-			<NavBar />
-			<Player
-				autoplay
-				loop
-				src="/mobile-technology-animation.json"
-				style={{ height: "300px", width: "300px" }}
-			/>
-			<div style={{ height: 400 }} />
-		</div>
+		<>
+			<Landing />
+		</>
 	);
 }

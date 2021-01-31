@@ -10,6 +10,7 @@ import { ThemeType } from "../context/theme";
 
 import { ThemeContext } from "../context/ThemeContext";
 import SideBar from "../components/navbar/SideBar";
+import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
 	const [theme, setTheme] = useState<"DARK" | "LIGHT">("LIGHT");
@@ -23,7 +24,9 @@ function MyApp({ Component, pageProps }) {
 			<SideBar />
 			<ChakraProvider theme={chakraTheme}>
 				<ThemeContext.Provider value={{ theme, toggleTheme }}>
-					<Component {...pageProps} />
+					<Layout>
+						<Component {...pageProps} />
+					</Layout>
 				</ThemeContext.Provider>
 			</ChakraProvider>
 		</div>
