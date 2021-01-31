@@ -13,6 +13,7 @@ interface TestimonialCompononentProps {
 	name: string;
 	job: string;
 	right?: boolean;
+	isGreaterThan764: boolean;
 }
 
 const getFlexDirection = (isLarger: boolean, right?: boolean) => {
@@ -32,18 +33,18 @@ const TestimonialCompononent: React.FC<TestimonialCompononentProps> = ({
 	name,
 	job,
 	right,
+	isGreaterThan764,
 }) => {
-	const [isLargerThan764] = useMediaQuery("(min-width: 764px)");
 	return (
 		<Flex
-			flexDirection={getFlexDirection(isLargerThan764, right)}
+			flexDirection={getFlexDirection(isGreaterThan764, right)}
 			marginTop={10}
 			overflow="hidden"
 		>
-			{!isLargerThan764 && (
+			{!isGreaterThan764 && (
 				<Box borderTopRadius={15} h={5} bgColor="#d6a400" />
 			)}
-			{isLargerThan764 && (
+			{isGreaterThan764 && (
 				<Box
 					w={5}
 					borderRadius={right ? "15px 0 0 15px" : "0 15px 15px 0"}
@@ -55,7 +56,7 @@ const TestimonialCompononent: React.FC<TestimonialCompononentProps> = ({
 				flexDirection="column"
 				alignItems="center"
 				justifyContent="center"
-				marginTop={isLargerThan764 ? 0 : 10}
+				marginTop={isGreaterThan764 ? 0 : 10}
 			>
 				<Avatar size="2xl" name={name} src={imageSrc} />
 				<Text>{name}</Text>
@@ -64,7 +65,7 @@ const TestimonialCompononent: React.FC<TestimonialCompononentProps> = ({
 			<Flex
 				alignItems="center"
 				flex="2"
-				padding={!isLargerThan764 ? "20px 40px" : "0 100px 0 70px"}
+				padding={!isGreaterThan764 ? "20px 40px" : "0 100px 0 70px"}
 			>
 				<Text fontFamily="Roboto, sans-serif" textAlign="justify">
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit.

@@ -1,17 +1,19 @@
 import { Box, Flex, Heading, useMediaQuery } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import PricingCard from "./PricingCard";
 
-interface PricingListProps {}
+interface PricingListProps {
+	isGreaterThan1000: boolean;
+}
 
-const PricingList: React.FC<PricingListProps> = () => {
-	const [isLargerThan1000] = useMediaQuery("(min-width: 1000px)");
+const PricingList: React.FC<PricingListProps> = ({ isGreaterThan1000 }) => {
 	return (
 		<Box>
 			<Heading marginY={10} textAlign="center">
 				Pricing
 			</Heading>
 			<Flex
-				flexDirection={isLargerThan1000 ? "row" : "column"}
+				flexDirection={isGreaterThan1000 ? "row" : "column"}
 				alignItems="center"
 				marginTop={20}
 				justifyContent="space-evenly"
@@ -22,13 +24,13 @@ const PricingList: React.FC<PricingListProps> = () => {
 					features={["feature one", "feature two", "feature three"]}
 				/>
 				<PricingCard
-					planName="Free Plan"
+					planName="Pro"
 					planPrice={50}
 					features={["feature one", "feature two", "feature three"]}
 					isPro
 				/>
 				<PricingCard
-					planName="Free Plan"
+					planName="Entreprise"
 					planPrice={100}
 					features={["feature one", "feature two", "feature three"]}
 				/>
