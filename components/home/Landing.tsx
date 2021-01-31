@@ -2,39 +2,51 @@ import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import React from "react";
 
-interface LandingProps {}
+interface LandingProps {
+	isLargerThan764: boolean;
+}
 
-const Landing: React.FC<LandingProps> = () => {
+const Landing: React.FC<LandingProps> = ({ isLargerThan764 }) => {
+	console.log(isLargerThan764);
 	return (
-		<Flex minHeight="calc(100vh - 70px)" justifyContent="center">
+		<Flex
+			flexDirection={!isLargerThan764 ? "column-reverse" : "row"}
+			minHeight="calc(100vh - 60px)"
+			justifyContent="center"
+		>
 			<Box flex="1">
 				<Flex
 					flexDirection="column"
 					justifyContent="center"
 					h="100%"
-					paddingLeft={50}
+					paddingLeft={!isLargerThan764 ? 0 : 50}
 				>
 					<Box marginBottom={50}>
 						<Heading
+							bgGradient="linear(to-l, #ffc400, #277ecf)"
+							bgClip="text"
 							fontFamily="Anton, sans-serif"
 							letterSpacing={4}
-							color="#277ecf"
+							//color="#277ecf"
 							fontSize="4rem"
+							textAlign={isLargerThan764 ? "start" : "center"}
 						>
 							TECHNOLOGY
 						</Heading>
 						<Heading
 							fontFamily="Anton, sans-serif"
 							letterSpacing={4}
+							textAlign={isLargerThan764 ? "start" : "center"}
 						>
 							Landing Page
 						</Heading>
 					</Box>
-					<Box>
+					<Box paddingX={isLargerThan764 ? 0 : 15}>
 						<Text
 							fontFamily="Roboto, sans-serif"
 							fontWeight="500"
-							marginBottom={10}
+							marginBottom={isLargerThan764 ? 10 : 5}
+							textAlign="justify"
 						>
 							Lorem ipsum dolor sit amet consectetur adipisicing
 							elit. Deleniti inventore ullam ab perspiciatis
@@ -42,7 +54,7 @@ const Landing: React.FC<LandingProps> = () => {
 							cupiditate porro deserunt
 						</Text>
 					</Box>
-					<Flex>
+					<Flex justifyContent={isLargerThan764 ? "start" : "center"}>
 						<Button
 							variant="outline"
 							colorScheme="#277ecf"
