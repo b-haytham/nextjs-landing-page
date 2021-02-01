@@ -3,6 +3,7 @@ import FooterComponent from "rc-footer";
 //#FFD700
 interface FooterProps {}
 import { Text } from "@chakra-ui/react";
+import FooterBottomComponent from "./FooterBottomComponent";
 
 const Footer: React.FC<FooterProps> = () => {
 	return (
@@ -90,7 +91,7 @@ const Footer: React.FC<FooterProps> = () => {
 					],
 				},
 			]}
-			bottom="Made with ❤️ by AFX"
+			bottom={<FooterBottomComponent />}
 		/>
 	);
 };
