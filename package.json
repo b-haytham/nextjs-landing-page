@@ -15,6 +15,7 @@
     "@lottiefiles/react-lottie-player": "^3.0.0",
     "framer-motion": "^3.2.2-rc.1",
     "next": "10.0.5",
+    "rc-footer": "^0.6.3",
     "rc-switch": "^3.2.2",
     "react": "17.0.1",
     "react-burger-menu": "^3.0.3",

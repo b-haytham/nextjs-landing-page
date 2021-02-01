@@ -19,7 +19,7 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
 				alignItems: "center",
 				padding: "2px 15px",
 				borderBottomWidth: 1,
-				borderBottomColor: "#d6a400",
+				borderBottomColor: "#FFD700",
 			}}
 		>
 			<Logo />

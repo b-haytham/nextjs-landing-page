@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "rc-footer/assets/index.css";
 import { useState } from "react";
 import {
 	ChakraProvider,

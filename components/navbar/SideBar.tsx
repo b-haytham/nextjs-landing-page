@@ -11,7 +11,7 @@ const SideBar = () => {
 			right
 			pageWrapId="page-wrap"
 			outerContainerId="outer-container"
-			customBurgerIcon={<GiHamburgerMenu color="#d6a400" />}
+			customBurgerIcon={<GiHamburgerMenu color="#FFD700" />}
 			customCrossIcon={
 				<ImCross
 					color="#d3aa22"

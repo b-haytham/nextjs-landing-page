@@ -24,20 +24,20 @@ const PricingCard: React.FC<PricingCardProps> = ({
 				front: {
 					minWidth: 300,
 					borderRadius: 20,
-					border: !isPro ? "1px solid #d6a400" : "1px solid #277ecf",
+					border: !isPro ? "1px solid #FFD700" : "1px solid #277ecf",
 					margin: "10px 0",
 					boxShadow: !isPro
-						? "-2px -1px 12px 0px #d6a400"
+						? "-2px -1px 12px 0px #FFD700"
 						: "-2px -1px 12px 0px #277ecf",
 					overflow: "hidden",
 				},
 				back: {
-					backgroundColor: isPro ? "#277ecf" : "#d6a400",
+					backgroundColor: isPro ? "#277ecf" : "#FFD700",
 					nimWidth: 300,
 					borderRadius: 20,
 					margin: "10px 0",
 					boxShadow: !isPro
-						? "-2px -1px 12px 0px #d6a400"
+						? "-2px -1px 12px 0px #FFD700"
 						: "-2px -1px 12px 0px #277ecf",
 					overflow: "hidden",
 				},
@@ -45,8 +45,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
 			isFlipped={isFlipped}
 			flipDirection="vertical"
 		>
-			<Box>
-				<Box bgColor={isPro ? "#277ecf" : "#d6a400"} h={10} />
+			<Box key={1}>
+				<Box bgColor={isPro ? "#277ecf" : "#FFD700"} h={10} />
 				<Flex
 					flexDirection="column"
 					minHeight={400}
@@ -79,15 +79,15 @@ const PricingCard: React.FC<PricingCardProps> = ({
 							marginY={5}
 							variant="solid"
 							color="#fff"
-							colorScheme={isPro ? "#277ecf" : "#d6a400"}
-							bgColor={isPro ? "#277ecf" : "#d6a400"}
+							colorScheme={isPro ? "#277ecf" : "#FFD700"}
+							bgColor={isPro ? "#277ecf" : "#FFD700"}
 						>
 							See Features
 						</Button>
 						<Button
 							variant="outline"
-							colorScheme={isPro ? "#277ecf" : "#d6a400"}
-							color={isPro ? "#277ecf" : "#d6a400"}
+							colorScheme={isPro ? "#277ecf" : "#FFD700"}
+							color={isPro ? "#277ecf" : "#FFD700"}
 						>
 							Subscribe
 						</Button>
@@ -95,7 +95,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 				</Flex>
 			</Box>
 
-			<Box minWidth={300}>
+			<Box key={2} minWidth={300}>
 				<Box h={10} />
 				<Flex
 					flexDirection="column"

@@ -42,13 +42,13 @@ const TestimonialCompononent: React.FC<TestimonialCompononentProps> = ({
 			overflow="hidden"
 		>
 			{!isGreaterThan764 && (
-				<Box borderTopRadius={15} h={5} bgColor="#d6a400" />
+				<Box borderTopRadius={15} h={5} bgColor="#FFD700" />
 			)}
 			{isGreaterThan764 && (
 				<Box
 					w={5}
 					borderRadius={right ? "15px 0 0 15px" : "0 15px 15px 0"}
-					bgColor="#d6a400"
+					bgColor="#FFD700"
 				/>
 			)}
 			<Flex

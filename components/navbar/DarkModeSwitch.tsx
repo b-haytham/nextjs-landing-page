@@ -22,7 +22,7 @@ const DarkModeSwitch: React.FC<DrakModeSwitchProps> = ({}) => {
 						height: "90%",
 					}}
 				>
-					<BsSun color="#d6a400" />
+					<BsSun color="#FFD700" />
 				</div>
 			}
 			onColor="#ccc6c6"

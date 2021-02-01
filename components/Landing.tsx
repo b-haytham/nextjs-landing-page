@@ -65,8 +65,8 @@ const Landing: React.FC<LandingProps> = ({ isLargerThan764 }) => {
 						</Button>
 						<Button
 							variant="outline"
-							colorScheme="#d6a400"
-							color="#d6a400"
+							colorScheme="#FFD700"
+							color="#FFD700"
 						>
 							Get Started
 						</Button>
