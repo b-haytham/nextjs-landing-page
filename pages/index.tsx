@@ -6,6 +6,8 @@ import Testimonials from "../components/home/Testimonials";
 import PricingList from "../components/home/PricingList";
 import CompaniesList from "../components/home/CompaniesList";
 import { useEffect, useState } from "react";
+import GetStarted from "../components/GetStarted";
+import FeatureList from "../components/home/FeaturesList";
 
 export default function Home() {
 	const [greaterThan764, setGreaterThan764] = useState(true);
@@ -26,7 +28,9 @@ export default function Home() {
 	return (
 		<>
 			<Landing isLargerThan764={greaterThan764} />
+			<FeatureList isGreaterThan764={greaterThan764} />
 			<Testimonials isGreaterThan764={greaterThan764} />
+			<GetStarted />
 			<PricingList isGreaterThan1000={isGreaterThan1000} />
 			<CompaniesList />
 		</>
