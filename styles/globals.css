@@ -38,6 +38,56 @@ a {
 	}
 }
 
+/*facebook icon */
+.fb-icon {
+	transition: all 0.8s;
+}
+.fb-icon:hover {
+	box-shadow: 5px 9px 50px -23px #3b5998;
+	transform: scale(1.2);
+	color: #3b5998;
+}
+
+/*twitter icon */
+.twitt-icon {
+	transition: all 0.8s;
+}
+.twitt-icon:hover {
+	box-shadow: 5px 9px 50px -23px #00acee;
+	transform: scale(1.2);
+	color: #00acee;
+}
+
+/*youtube icon */
+.yt-icon {
+	transition: all 0.8s;
+}
+
+.yt-icon:hover {
+	box-shadow: 5px 9px 50px -23px #c4302b;
+	transform: scale(1.2);
+	color: #c4302b;
+}
+
+/*instagram icon */
+.inst-icon {
+	transition: all 0.8s;
+}
+
+.inst-icon:hover {
+	box-shadow: 5px 9px 50px -23px white;
+	transform: scale(1.2);
+	color: white;
+}
+
+.footer-link {
+	color: rgb(112, 107, 107);
+}
+
+.footer-link:hover {
+	color: #e4d687;
+}
+
 .nav-link-active-side-bar {
 	color: #ffd700;
 	font-weight: bold;
@@ -46,7 +96,7 @@ a {
 }
 
 .nav-link-active {
-	color: #ffd700;
+	color: #ffd700 !important;
 	font-weight: bold;
 	font-size: larger;
 	margin-right: 10px;

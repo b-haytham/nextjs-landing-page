@@ -7,7 +7,7 @@ const NavLinks: React.FC<NavLinksProps> = ({}) => {
 	return (
 		<div className="nv-links">
 			<ActiveLink href="/" activeClassName="nav-link-active">
-				<a className="menu-item">Home</a>
+				<a className="nv-link">Home</a>
 			</ActiveLink>
 			<ActiveLink href="/learn-more" activeClassName="nav-link-active">
 				<a className="nv-link">Learn more</a>
