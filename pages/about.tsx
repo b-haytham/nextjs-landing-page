@@ -1,8 +1,52 @@
-import { Box, Divider, Flex, Heading, Text } from "@chakra-ui/react";
-import React from "react";
+import {
+	Box,
+	Divider,
+	Flex,
+	Heading,
+	Text,
+	useMediaQuery,
+} from "@chakra-ui/react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
 import Carousel from "../components/Carousel";
+import OurTeam from "../components/OurTeam";
+
+export type PoepleType = {
+	name: {
+		title: string;
+		first: string;
+		last: string;
+	};
+	picture: {
+		large: string;
+		medium: string;
+		thumbnail: string;
+	};
+};
 
 const about = () => {
+	const [isLoading, setIsLoading] = useState(true);
+	const [peoples, setPeoples] = useState(null);
+	const [error, setError] = useState(null);
+
+	const [greaterThan764, setGreaterThan764] = useState(true);
+	const [isLargerThan764] = useMediaQuery("(min-width: 764px)");
+
+	useEffect(() => {
+		setGreaterThan764(isLargerThan764);
+	}, [isLargerThan764]);
+
+	useEffect(() => {
+		axios
+			.get("https://randomuser.me/api/?results=10")
+			.then((res) => {
+				setIsLoading(false);
+				setPeoples(res.data);
+			})
+			.catch((err) => setError(error));
+	}, []);
+
 	return (
 		<>
 			<Heading marginY={10} textAlign="center">
@@ -44,6 +88,11 @@ const about = () => {
 					dolor sit amet consectetur adipisicing elit. Facilis, eius!
 				</Text>
 				<Carousel />
+				<OurTeam
+					peoples={peoples ? peoples.results : null}
+					isLoading={isLoading}
+					greaterThan764={greaterThan764}
+				/>
 			</Box>
 		</>
 	);
