@@ -115,8 +115,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
 					</Text>
 
 					<Box>
-						{features.map((f) => (
+						{features.map((f,indx) => (
 							<Text
+								key={indx}
 								fontFamily="Roboto, sans-serif"
 								fontWeight="bolder"
 								textAlign="center"

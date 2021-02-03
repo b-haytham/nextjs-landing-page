@@ -108,6 +108,7 @@ a {
 	color: white;
 }
 
+/* footer */
 .footer-link {
 	color: rgb(112, 107, 107);
 }
@@ -115,6 +116,8 @@ a {
 .footer-link:hover {
 	color: #e4d687;
 }
+
+/* nav links*/
 
 .nav-link-active-side-bar {
 	color: #ffd700;
@@ -134,17 +137,20 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
 
 .nv-link {
-	color: #b8b7ad;
 	font-size: larger;
-	margin-right: 10px;
+	margin-right: 20px;
+	color: #373a47;
+	font-weight: bolder;
+	transition: all 0.5s;
 }
 .nv-link:hover {
-	text-decoration: underline;
-	text-decoration-color: #ffd700;
+	color: #ffd700;
 }
+
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -200,12 +206,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Wrapper for item list */
 .bm-item-list {
-	color: #b8b7ad;
+	
+	font-weight: bolder;
 	padding: 0.8em;
 	display: flex;
 	flex-direction: column;
 	height: 374px;
+	transition: all 0.5s;
 }
+
 
 /* Individual item */
 .bm-item {
@@ -220,8 +229,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
 	display: inline-block;
-
-	color: #d1d1d1;
+	color: #373a47;
 	margin-bottom: 10px;
 	text-align: left;
 	text-decoration: none;
@@ -229,5 +237,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .bm-item:hover {
-	color: #ffffff;
+	color: #ffd700;
 }
