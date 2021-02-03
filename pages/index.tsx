@@ -31,7 +31,7 @@ export default function Home() {
 			<FeatureList isGreaterThan764={greaterThan764} />
 			<Testimonials isGreaterThan764={greaterThan764} />
 			<GetStarted />
-			<PricingList isGreaterThan1000={isGreaterThan1000} />
+			<PricingList showTitle isGreaterThan1000={isGreaterThan1000} />
 			<CompaniesList />
 		</>
 	);

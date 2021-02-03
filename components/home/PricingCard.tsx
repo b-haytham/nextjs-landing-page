@@ -20,6 +20,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
 
 	return (
 		<ReactCardFlip
+			containerStyle={{
+				margin: "15px",
+			}}
 			cardStyles={{
 				front: {
 					minWidth: 300,
@@ -45,7 +48,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 			isFlipped={isFlipped}
 			flipDirection="vertical"
 		>
-			<Box key={1}>
+			<Box key={1} minW={300}>
 				<Box bgColor={isPro ? "#277ecf" : "#FFD700"} h={10} />
 				<Flex
 					flexDirection="column"

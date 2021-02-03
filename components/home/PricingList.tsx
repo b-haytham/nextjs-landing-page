@@ -4,19 +4,26 @@ import PricingCard from "./PricingCard";
 
 interface PricingListProps {
 	isGreaterThan1000: boolean;
+	showTitle?: boolean;
 }
 
-const PricingList: React.FC<PricingListProps> = ({ isGreaterThan1000 }) => {
+const PricingList: React.FC<PricingListProps> = ({
+	isGreaterThan1000,
+	showTitle,
+}) => {
 	return (
 		<Box>
-			<Heading marginY={10} textAlign="center">
-				Pricing
-			</Heading>
+			{showTitle && (
+				<Heading marginY={10} textAlign="center">
+					Pricing
+				</Heading>
+			)}
 			<Flex
-				flexDirection={isGreaterThan1000 ? "row" : "column"}
+				//flexDirection={isGreaterThan1000 ? "row" : "column"}
 				alignItems="center"
 				marginTop={20}
 				justifyContent="space-evenly"
+				wrap="wrap"
 			>
 				<PricingCard
 					planName="Free Plan"

@@ -16,8 +16,126 @@ const Footer: React.FC<FooterProps> = () => {
 				justifyContent="space-between"
 				alignItems="center"
 				marginBottom={50}
+				wrap="wrap"
 			>
-				<Flex flexDirection="column">
+				<Flex flexDirection="column" margin="10px 15px">
+					<Text
+						color="#FFD700"
+						fontFamily="Roboto"
+						fontWeight="bold"
+						marginBottom={10}
+						fontSize="1.4rem"
+					>
+						Section
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+				</Flex>
+				<Flex flexDirection="column" margin="10px 15px">
+					<Text
+						color="#FFD700"
+						fontFamily="Roboto"
+						fontWeight="bold"
+						marginBottom={10}
+						fontSize="1.4rem"
+					>
+						Section
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+				</Flex>
+				<Flex flexDirection="column" margin="10px 15px">
+					<Text
+						color="#FFD700"
+						fontFamily="Roboto"
+						fontWeight="bold"
+						marginBottom={10}
+						fontSize="1.4rem"
+					>
+						Section
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+					<Text
+						className="footer-link"
+						cursor="pointer"
+						fontFamily="Roboto"
+					>
+						Lorem ipsum
+					</Text>
+				</Flex>
+				<Flex flexDirection="column" margin="10px 15px">
 					<Text
 						color="#FFD700"
 						fontFamily="Roboto"
@@ -57,7 +175,7 @@ const Footer: React.FC<FooterProps> = () => {
 					</Text>
 				</Flex>
 
-				<Flex flexDirection="column">
+				<Flex flexDirection="column" margin="10px 15px">
 					<Text
 						color="#FFD700"
 						fontFamily="Roboto"
@@ -98,7 +216,7 @@ const Footer: React.FC<FooterProps> = () => {
 					</Text>
 				</Flex>
 
-				<Flex flexDirection="column">
+				<Flex flexDirection="column" margin="10px 15px">
 					<Text
 						color="#FFD700"
 						fontFamily="Roboto"
