@@ -38,6 +38,17 @@ a {
 	}
 }
 
+/* Contact icons */
+
+.contact-ways-icon {
+	transition: all 0.8s;
+}
+
+.contact-ways-icon:hover {
+	color: #ffd700;
+	transform: scale(1.2);
+}
+
 /* scroll bar of pricing table  */
 .table-scroll-bar::-webkit-scrollbar {
 	height: 8px;
