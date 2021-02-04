@@ -1,9 +1,8 @@
-import { Box, Flex, Heading, useMediaQuery } from "@chakra-ui/react";
-import React, { useContext, useEffect, useState } from "react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
+import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import useGreaterThan from "../../utils/useGreaterThan";
 import AnimatedListCard from "../Animated/AnimatedPricingCard";
-import AnimatedText, { MountLazy } from "../Animated/AnimatedText";
 import PricingCard from "./PricingCard";
 
 interface PricingListProps {
@@ -32,7 +31,7 @@ const PricingList: React.FC<PricingListProps> = ({ showTitle, animate }) => {
         justifyContent="space-evenly"
         wrap="wrap"
       >
-        {(animate && isGreaterThan) ? (
+        {(isGreaterThan) ? (
           <>
             <AnimatedListCard indx={0.5}>
               <PricingCard

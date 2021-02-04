@@ -6,18 +6,28 @@ import LazyMount from "react-lazy-mount";
 
 interface AnimatedTextProps {
   componentName?: string;
-  translateX?: boolean
+  translateX?: boolean;
+  basic?: boolean;
 }
+
+const basicVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
   children,
-  componentName,
-  translateX
+  translateX,
+  basic,
 }) => {
   const controls = useAnimation();
   const { ref, inView, entry } = useInView({});
 
-  const variants = useMemo(()=> {
+  const variants = useMemo(() => {
     return {
       hidden: {
         x: translateX ? 600 : 0,
@@ -32,7 +42,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
         scale: 1,
       },
     };
-  }, [translateX]) 
+  }, [translateX]);
 
   useEffect(() => {
     controls.start("visible");
@@ -41,7 +51,11 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   return (
     <div ref={ref}>
       {inView && (
-        <motion.div variants={variants} initial="hidden" animate={controls}>
+        <motion.div
+          variants={basic ? basicVariants : variants}
+          initial="hidden"
+          animate={controls}
+        >
           {children}
         </motion.div>
       )}
