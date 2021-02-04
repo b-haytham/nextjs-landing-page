@@ -1,12 +1,12 @@
 //#FFD700
 //#FFD700
-interface FooterProps {}
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import AnimatedListItem from "./Animated/AnimatedListItem";
-import { MountLazy } from "./Animated/AnimatedText";
 import FooterBottomComponent from "./FooterBottomComponent";
+
+interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
   const { theme } = useContext(ThemeContext);
@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = () => {
             </Text>
           </Flex>
         </AnimatedListItem>
-        <AnimatedListItem indx={.2}>
+        <AnimatedListItem indx={0.2}>
           <Flex flexDirection="column" margin="10px 15px">
             <Text
               color="#FFD700"

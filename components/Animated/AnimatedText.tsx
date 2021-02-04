@@ -1,43 +1,38 @@
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import { useInView } from "react-intersection-observer";
 import LazyMount from "react-lazy-mount";
 
 interface AnimatedTextProps {
-  componentName: string;
+  componentName?: string;
+  translateX?: boolean
 }
-
-const variants = {
-  hidden: {
-    y: -150,
-    opacity: 0,
-    scale: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    scale: 1,
-  },
-};
-
-export const MountLazy: React.FC = ({ children }) => {
-  const { ref, inView } = useInView();
-  return (
-    <div ref={ref}>
-      <LazyMount trigger={inView}>{children}</LazyMount>
-    </div>
-  );
-};
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
   children,
   componentName,
+  translateX
 }) => {
   const controls = useAnimation();
   const { ref, inView, entry } = useInView({});
 
-  console.log(componentName, "--", inView);
+  const variants = useMemo(()=> {
+    return {
+      hidden: {
+        x: translateX ? 600 : 0,
+        y: -150,
+        opacity: 0,
+        scale: 0,
+      },
+      visible: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        scale: 1,
+      },
+    };
+  }, [translateX]) 
 
   useEffect(() => {
     controls.start("visible");
