@@ -1,17 +1,19 @@
 import { Box, Flex, Heading, useMediaQuery } from "@chakra-ui/react";
 import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
+import useGreaterThan from "../../utils/useGreaterThan";
 import AnimatedListCard from "../Animated/AnimatedPricingCard";
 import AnimatedText, { MountLazy } from "../Animated/AnimatedText";
 import PricingCard from "./PricingCard";
 
 interface PricingListProps {
   showTitle?: boolean;
+  animate?: boolean;
 }
 
-const PricingList: React.FC<PricingListProps> = ({ showTitle }) => {
+const PricingList: React.FC<PricingListProps> = ({ showTitle, animate }) => {
   const { theme } = useContext(ThemeContext);
-
+  const isGreaterThan = useGreaterThan(1000)
   return (
     <Box>
       {showTitle && (
@@ -30,22 +32,51 @@ const PricingList: React.FC<PricingListProps> = ({ showTitle }) => {
         justifyContent="space-evenly"
         wrap="wrap"
       >
-        <PricingCard
-          planName="Free Plan"
-          planPrice={0}
-          features={["feature one", "feature two", "feature three"]}
-        />
-        <PricingCard
-          planName="Pro"
-          planPrice={50}
-          features={["feature one", "feature two", "feature three"]}
-          isPro
-        />
-        <PricingCard
-          planName="Entreprise"
-          planPrice={100}
-          features={["feature one", "feature two", "feature three"]}
-        />
+        {(animate && isGreaterThan) ? (
+          <>
+            <AnimatedListCard indx={0.5}>
+              <PricingCard
+                planName="Free Plan"
+                planPrice={0}
+                features={["feature one", "feature two", "feature three"]}
+              />
+            </AnimatedListCard>
+            <AnimatedListCard indx={0.5}>
+              <PricingCard
+                planName="Pro"
+                planPrice={50}
+                features={["feature one", "feature two", "feature three"]}
+                isPro
+              />
+            </AnimatedListCard>
+            <AnimatedListCard indx={0.5}>
+              <PricingCard
+                planName="Entreprise"
+                planPrice={100}
+                features={["feature one", "feature two", "feature three"]}
+              />
+            </AnimatedListCard>
+          </>
+        ) : (
+          <>
+            <PricingCard
+              planName="Free Plan"
+              planPrice={0}
+              features={["feature one", "feature two", "feature three"]}
+            />
+            <PricingCard
+              planName="Pro"
+              planPrice={50}
+              features={["feature one", "feature two", "feature three"]}
+              isPro
+            />
+            <PricingCard
+              planName="Entreprise"
+              planPrice={100}
+              features={["feature one", "feature two", "feature three"]}
+            />
+          </>
+        )}
       </Flex>
     </Box>
   );
