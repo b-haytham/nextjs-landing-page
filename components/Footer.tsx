@@ -24,7 +24,7 @@ const Footer: React.FC<FooterProps> = () => {
         marginBottom={50}
         wrap="wrap"
       >
-        <AnimatedListItem indx={1}>
+        <AnimatedListItem indx={0}>
           <Flex flexDirection="column" margin="10px 15px">
             <Text
               color="#FFD700"
@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = () => {
             </Text>
           </Flex>
         </AnimatedListItem>
-        <AnimatedListItem indx={1.5}>
+        <AnimatedListItem indx={.2}>
           <Flex flexDirection="column" margin="10px 15px">
             <Text
               color="#FFD700"
@@ -74,7 +74,7 @@ const Footer: React.FC<FooterProps> = () => {
             </Text>
           </Flex>
         </AnimatedListItem>
-        <AnimatedListItem indx={2}>
+        <AnimatedListItem indx={0.4}>
           <Flex flexDirection="column" margin="10px 15px">
             <Text
               color="#FFD700"
@@ -99,7 +99,7 @@ const Footer: React.FC<FooterProps> = () => {
             </Text>
           </Flex>
         </AnimatedListItem>
-        <AnimatedListItem indx={2.5}>
+        <AnimatedListItem indx={0.6}>
           <Flex flexDirection="column" margin="10px 15px">
             <Text
               color="#FFD700"
@@ -124,7 +124,7 @@ const Footer: React.FC<FooterProps> = () => {
             </Text>
           </Flex>
         </AnimatedListItem>
-        <AnimatedListItem indx={3}>
+        <AnimatedListItem indx={0.8}>
           <Flex flexDirection="column" margin="10px 15px">
             <Text
               color="#FFD700"
@@ -150,7 +150,7 @@ const Footer: React.FC<FooterProps> = () => {
             </Text>
           </Flex>
         </AnimatedListItem>
-        <AnimatedListItem indx={3.5}>
+        <AnimatedListItem indx={1}>
           <Flex flexDirection="column" margin="10px 15px">
             <Text
               color="#FFD700"
@@ -176,7 +176,7 @@ const Footer: React.FC<FooterProps> = () => {
           </Flex>
         </AnimatedListItem>
       </Flex>
-      <AnimatedListItem indx={1}>
+      <AnimatedListItem indx={0.5}>
         <FooterBottomComponent />
       </AnimatedListItem>
     </Box>

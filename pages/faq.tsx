@@ -2,6 +2,7 @@ import { Box, Heading } from "@chakra-ui/react";
 import { useContext } from "react";
 
 import FaqQ from "react-faq-component";
+import AnimatedText from "../components/Animated/AnimatedText";
 import { ThemeContext } from "../context/ThemeContext";
 
 const Faq = () => {
@@ -20,9 +21,11 @@ const Faq = () => {
 
 	return (
 		<Box bgColor={theme === 'DARK' && 'black'}>
+			<AnimatedText componentName='Faq Title'>
 			<Heading paddingY={10} textAlign="center" color={theme === 'DARK' && '#d1d1d1'}>
 				Frequently Asked Questions (FAQ)
 			</Heading>
+			</AnimatedText>
 			<Box minH="100vh" paddingX={20} paddingY={70} >
 				<FaqQ data={data} styles={styles} />
 			</Box>
