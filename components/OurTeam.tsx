@@ -1,28 +1,32 @@
 import { Avatar, Box, Flex, Text, Heading } from "@chakra-ui/react";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 import { PoepleType } from "../pages/about";
+import useGreaterThan from "../utils/useGreaterThan";
 
 interface OurTeamProps {
 	isLoading: boolean;
 	peoples: PoepleType[] | null;
-	greaterThan764: boolean;
 }
 
 const OurTeam: React.FC<OurTeamProps> = ({
 	isLoading,
 	peoples,
-	greaterThan764,
 }) => {
-	console.log(peoples);
+
+	const { theme } = useContext(ThemeContext)
+
+	const isGreaterThan = useGreaterThan(764)
+
 	return (
 		<Box>
-			<Heading marginY={10} textAlign="center">
+			<Heading marginY={10} textAlign="center" color={theme === 'DARK' && '#d1d1d1'}> 
 				Our Team
 			</Heading>
 			<Flex
 				justifyContent="space-between"
 				alignItems="center"
-				padding="20px 50px"
-				marginY={50}
+				padding='80px 50px 100px'
 				wrap="wrap"
 			>
 				{peoples &&
@@ -35,9 +39,9 @@ const OurTeam: React.FC<OurTeamProps> = ({
 							<Avatar
 								src={p.picture.medium}
 								margin={10}
-								size={greaterThan764 ? "2xl" : "xl"}
+								size={isGreaterThan ? "2xl" : "xl"}
 							/>
-							<Text>
+							<Text color={theme === 'DARK' && '#757573'}>
 								<strong>{p.name.title}</strong>
 								{` ${p.name.first} ${p.name.last}`}
 							</Text>

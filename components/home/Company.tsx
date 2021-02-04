@@ -9,7 +9,7 @@ const Company: React.FC<CompanyProps & ImageProps> = ({
 	height,
 }) => {
 	return (
-		<Box margin={30}>
+		<Box margin={30} >
 			<Image src={src} width={width} height={height} />
 		</Box>
 	);

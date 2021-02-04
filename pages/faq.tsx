@@ -1,27 +1,35 @@
 import { Box, Heading } from "@chakra-ui/react";
+import { useContext } from "react";
 
 import FaqQ from "react-faq-component";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Faq = () => {
+	const { theme } = useContext(ThemeContext)
+
+
+	const styles = {
+		bgColor: theme === 'DARK' ? 'black' : 'white' ,
+		rowContentColor: theme === 'DARK' ? 'grey' : 'black',
+		rowTitleTextSize: "1.5rem",
+		rowTitleColor: "grey",
+		rowContentPaddingTop: "10px",
+		rowContentPaddingBottom: "50px",
+		rowContentPaddingLeft: "10px",
+	};
+
 	return (
-		<>
-			<Heading marginY={10} textAlign="center">
+		<Box bgColor={theme === 'DARK' && 'black'}>
+			<Heading paddingY={10} textAlign="center" color={theme === 'DARK' && '#d1d1d1'}>
 				Frequently Asked Questions (FAQ)
 			</Heading>
-			<Box minH="100vh" paddingX={20} paddingY={20} marginY={50}>
+			<Box minH="100vh" paddingX={20} paddingY={70} >
 				<FaqQ data={data} styles={styles} />
 			</Box>
-		</>
+		</Box>
 	);
 };
 
-const styles = {
-	rowTitleTextSize: "1.5rem",
-	rowTitleColor: "grey",
-	rowContentPaddingTop: "10px",
-	rowContentPaddingBottom: "50px",
-	rowContentPaddingLeft: "10px",
-};
 
 const data = {
 	title: "How it works",

@@ -1,15 +1,19 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import Feature from "./Feature";
 
 interface FeatureListProps {
-	isGreaterThan764: boolean;
+	
 }
 
-const FeatureList: React.FC<FeatureListProps> = ({ isGreaterThan764 }) => {
+const FeatureList: React.FC<FeatureListProps> = ({  }) => {
+
+	const { theme } = useContext(ThemeContext)
+
 	return (
-		<Box>
-			<Heading marginY={10} textAlign="center">
+		<Box bgColor={theme === 'DARK' ? 'black' : 'white'}>
+			<Heading marginY={10} textAlign="center" color={theme === 'DARK' && '#d1d1d1'}>
 				Features We Provide
 			</Heading>
 			<Flex flexDirection={"column"} alignItems="center" marginTop={20}>

@@ -14,7 +14,7 @@ import SideBar from "../components/navbar/SideBar";
 import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
-	const [theme, setTheme] = useState<"DARK" | "LIGHT">("LIGHT");
+	const [theme, setTheme] = useState<"DARK" | "LIGHT">("DARK");
 
 	const toggleTheme = (theme: ThemeType) => {
 		return setTheme((th) => (th === "LIGHT" ? "DARK" : "LIGHT"));
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<div id="outer-container">
-			<SideBar />
+			<SideBar theme={theme} />
 			<ChakraProvider theme={chakraTheme}>
 				<ThemeContext.Provider value={{ theme, toggleTheme }}>
 					<Layout>

@@ -1,13 +1,25 @@
+import React, { useContext, useEffect } from "react";
 import { fallDown as Menu } from "react-burger-menu";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
+import { ThemeType } from "../../context/theme";
+import { ThemeContext } from "../../context/ThemeContext";
 
 import ActiveLink from "./ActiveNavLink";
 
-const SideBar = () => {
+
+interface SideBarProps {
+	theme: ThemeType
+}
+
+const SideBar: React.FC<SideBarProps> = ({theme}) => {
+
+	console.log(theme)
+
 	return (
 		<Menu
+			styles={{bmMenu:{ backgroundColor: theme === 'DARK' && 'black' }}}
 			right
 			pageWrapId="page-wrap"
 			outerContainerId="outer-container"

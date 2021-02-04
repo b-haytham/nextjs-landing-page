@@ -10,24 +10,28 @@ import {
 	Thead,
 	Tr,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { ThemeContext } from "../context/ThemeContext";
 
 interface PricingTableProps {
-	isGreaterThan1000: boolean;
+	
 }
 
 const PricingTable: React.FC<PricingTableProps> = ({}) => {
+
+	const { theme } = useContext(ThemeContext)
+
 	return (
 		<Box>
-			<Text fontSize="1.4rem" fontWeight={700} textAlign="center" my={20}>
+			<Text fontSize="1.4rem" fontWeight={700} textAlign="center" my={20} color={theme === 'DARK' && '#d1d1d1'}>
 				Pricing Table
 			</Text>
 
 			<Box
 				className="table-scroll-bar"
 				px={20}
-				mb={150}
+				pb={170}
 				overflowX="scroll"
 			>
 				<Table minWidth="864px" colorScheme="orange">

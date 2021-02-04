@@ -1,15 +1,19 @@
 import classes from "../styles/Home.module.css";
 
-import { useMediaQuery } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 import Landing from "../components/Landing";
 import Testimonials from "../components/home/Testimonials";
 import PricingList from "../components/home/PricingList";
 import CompaniesList from "../components/home/CompaniesList";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import GetStarted from "../components/GetStarted";
 import FeatureList from "../components/home/FeaturesList";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function Home() {
+
+	const { theme } = useContext(ThemeContext)
+
 	const [greaterThan764, setGreaterThan764] = useState(true);
 
 	const [isLargerThan764] = useMediaQuery("(min-width: 764px)");
@@ -26,13 +30,13 @@ export default function Home() {
 	}, [isLargerThan764]);
 
 	return (
-		<>
-			<Landing isLargerThan764={greaterThan764} />
-			<FeatureList isGreaterThan764={greaterThan764} />
-			<Testimonials isGreaterThan764={greaterThan764} />
+		<Box bgColor={theme === 'DARK' ? 'black' : 'white'}>
+			<Landing  />
+			<FeatureList  />
+			<Testimonials  />
 			<GetStarted />
-			<PricingList showTitle isGreaterThan1000={isGreaterThan1000} />
+			<PricingList showTitle  />
 			<CompaniesList />
-		</>
+		</Box>
 	);
 }

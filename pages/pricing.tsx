@@ -1,25 +1,24 @@
-import { Flex, Heading, Text, useMediaQuery } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import { Box, Flex, Heading, Text, useMediaQuery } from "@chakra-ui/react";
+import React, { useContext, useEffect, useState } from "react";
 import PricingList from "../components/home/PricingList";
 import PricingTable from "../components/PricingTable";
+import { ThemeContext } from "../context/ThemeContext";
+import useGreaterThan from "../utils/useGreaterThan";
 
 const Pricing = () => {
-	const [isGreaterThan1000, setIsGreaterThan1000] = useState(true);
-	const [isLargerThan1000] = useMediaQuery("(min-width: 1000px)");
+	const isGreaterThan = useGreaterThan(1000)
 
-	useEffect(() => {
-		setIsGreaterThan1000(isLargerThan1000);
-	}, [isLargerThan1000]);
+	const { theme } = useContext(ThemeContext)
 
 	return (
-		<>
+		<Box bgColor={theme === 'DARK' ? 'black' : 'white'}>
 			<Flex
 				flexDirection="column"
 				alignItems="center"
 				justifyContent="center"
 				marginBottom={50}
 			>
-				<Heading marginY={10} textAlign="center">
+				<Heading marginY={10} textAlign="center" color={theme === 'DARK' && '#d1d1d1'}>
 					Pricing Guide
 				</Heading>
 				<Text fontWeight={300} textAlign="center" maxW={300}>
@@ -27,9 +26,9 @@ const Pricing = () => {
 					Totam placeat dolorem harum aliquam, nulla ad perf ?
 				</Text>
 			</Flex>
-			<PricingList isGreaterThan1000={isGreaterThan1000} />
-			<PricingTable isGreaterThan1000={isLargerThan1000} />
-		</>
+			<PricingList  />
+			<PricingTable  />
+		</Box>
 	);
 };
 

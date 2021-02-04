@@ -1,7 +1,8 @@
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import ReactCardFlip from "react-card-flip";
+import { ThemeContext } from "../../context/ThemeContext";
 
 interface PricingCardProps {
 	planName: string;
@@ -17,6 +18,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
 	features,
 }) => {
 	const [isFlipped, setIsFlipped] = useState(false);
+
+	const { theme } = useContext(ThemeContext)
 
 	return (
 		<ReactCardFlip
@@ -60,11 +63,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
 						fontFamily="Fredoka One, cursive;"
 						fontSize="1.4rem"
 						textAlign="center"
+						color={theme === 'DARK' && '#d1d1d1'}
 					>
 						{planName}
 					</Text>
 					<Box>
-						<Text>
+						<Text color={theme === 'DARK' && '#d1d1d1'}>
 							<span
 								style={{
 									fontSize: "3rem",

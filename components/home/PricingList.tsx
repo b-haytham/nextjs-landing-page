@@ -1,25 +1,28 @@
 import { Box, Flex, Heading, useMediaQuery } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import PricingCard from "./PricingCard";
 
 interface PricingListProps {
-	isGreaterThan1000: boolean;
+	
 	showTitle?: boolean;
 }
 
 const PricingList: React.FC<PricingListProps> = ({
-	isGreaterThan1000,
+	
 	showTitle,
 }) => {
+
+	const { theme } = useContext(ThemeContext)
+
 	return (
 		<Box>
 			{showTitle && (
-				<Heading marginY={10} textAlign="center">
+				<Heading marginY={10} textAlign="center" color={theme === 'DARK' && '#d1d1d1'}>
 					Pricing
 				</Heading>
 			)}
 			<Flex
-				//flexDirection={isGreaterThan1000 ? "row" : "column"}
 				alignItems="center"
 				marginTop={20}
 				justifyContent="space-evenly"

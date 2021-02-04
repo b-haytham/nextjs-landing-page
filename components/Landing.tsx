@@ -1,16 +1,21 @@
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+import useGreaterThan from "../utils/useGreaterThan";
+import MeComponent from "./MeComponent";
 
 interface LandingProps {
-	isLargerThan764: boolean;
+	
 }
 
-const Landing: React.FC<LandingProps> = ({ isLargerThan764 }) => {
-	console.log(isLargerThan764);
+const Landing: React.FC<LandingProps> = ({ }) => {
+	const isGreaterThan = useGreaterThan(764)
+	const { theme } = useContext(ThemeContext)
 	return (
 		<Flex
-			flexDirection={!isLargerThan764 ? "column-reverse" : "row"}
+			bgColor='black'
+			flexDirection={!isGreaterThan ? "column-reverse" : "row"}
 			minHeight="calc(100vh - 60px)"
 			justifyContent="center"
 		>
@@ -19,7 +24,7 @@ const Landing: React.FC<LandingProps> = ({ isLargerThan764 }) => {
 					flexDirection="column"
 					justifyContent="center"
 					h="100%"
-					paddingLeft={!isLargerThan764 ? 0 : 50}
+					paddingLeft={!isGreaterThan ? 0 : 50}
 				>
 					<Box marginBottom={50}>
 						<Heading
@@ -29,24 +34,26 @@ const Landing: React.FC<LandingProps> = ({ isLargerThan764 }) => {
 							letterSpacing={4}
 							//color="#277ecf"
 							fontSize="4rem"
-							textAlign={isLargerThan764 ? "start" : "center"}
+							textAlign={isGreaterThan ? "start" : "center"}
 						>
 							TECHNOLOGY
 						</Heading>
 						<Heading
 							fontFamily="Anton, sans-serif"
 							letterSpacing={4}
-							textAlign={isLargerThan764 ? "start" : "center"}
+							textAlign={isGreaterThan ? "start" : "center"}
+							
 						>
 							Landing Page
 						</Heading>
 					</Box>
-					<Box paddingX={isLargerThan764 ? 0 : 15}>
+					<Box paddingX={isGreaterThan ? 0 : 15}>
 						<Text
 							fontFamily="Roboto, sans-serif"
 							fontWeight="500"
-							marginBottom={isLargerThan764 ? 10 : 5}
+							marginBottom={isGreaterThan ? 10 : 5}
 							textAlign="justify"
+							
 						>
 							Lorem ipsum dolor sit amet consectetur adipisicing
 							elit. Deleniti inventore ullam ab perspiciatis
@@ -54,7 +61,7 @@ const Landing: React.FC<LandingProps> = ({ isLargerThan764 }) => {
 							cupiditate porro deserunt
 						</Text>
 					</Box>
-					<Flex justifyContent={isLargerThan764 ? "start" : "center"}>
+					<Flex justifyContent={isGreaterThan ? "start" : "center"}>
 						<Button
 							variant="outline"
 							colorScheme="#277ecf"
@@ -71,9 +78,10 @@ const Landing: React.FC<LandingProps> = ({ isLargerThan764 }) => {
 							Get Started
 						</Button>
 					</Flex>
+					{isGreaterThan && <MeComponent isLanding/>}
 				</Flex>
 			</Box>
-			<Box flex="1" borderBottomWidth={1} alignSelf="center">
+			<Box flex="1" borderBottomWidth={theme === 'DARK' ? 0 : 1} alignSelf="center">
 				<Player
 					autoplay
 					loop

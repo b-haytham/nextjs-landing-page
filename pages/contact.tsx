@@ -1,26 +1,25 @@
-import { Text, Flex, Heading, Divider, useMediaQuery } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import { Text, Flex, Heading, Divider, useMediaQuery, Box } from "@chakra-ui/react";
+import React, { useContext, useEffect, useState } from "react";
 import ContactWays from "../components/ContactWays";
 import GetInTouch from "../components/GetIntouch";
+import { ThemeContext } from "../context/ThemeContext";
+import useGreaterThan from "../utils/useGreaterThan";
 
 const Contact = () => {
-	const [greaterThan764, setGreaterThan764] = useState(true);
 
-	const [isLargerThan764] = useMediaQuery("(min-width: 764px)");
+	const { theme } = useContext(ThemeContext)
 
-	useEffect(() => {
-		setGreaterThan764(isLargerThan764);
-	}, [isLargerThan764]);
+	const isGreaterThan = useGreaterThan(764)
 
 	return (
-		<>
+		<Box bgColor={theme === 'DARK' && 'black' }>
 			<Flex
 				flexDirection="column"
 				alignItems="center"
 				justifyContent="center"
 				marginBottom={50}
 			>
-				<Heading marginY={10} textAlign="center">
+				<Heading marginY={10} textAlign="center" color={theme === 'DARK' && '#d1d1d1'}>
 					Contact Us
 				</Heading>
 				<Flex
@@ -41,8 +40,8 @@ const Contact = () => {
 				</Flex>
 			</Flex>
 			<ContactWays />
-			<GetInTouch greaterThan764={greaterThan764} />
-		</>
+			<GetInTouch  />
+		</Box>
 	);
 };
 
