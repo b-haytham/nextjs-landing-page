@@ -1,8 +1,6 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
-import AnimatedListItem from "../Animated/AnimatedListItem";
-import AnimatedText, { MountLazy } from "../Animated/AnimatedText";
 import Company from "./Company";
 
 interface CompaniesListProps {}
@@ -27,9 +25,7 @@ const CompaniesList: React.FC<CompaniesListProps> = () => {
         wrap="wrap"
       >
         {images.map((img, indx) => (
-          
-            <Company key={indx} src={img} width={100} height={100} />
-          
+          <Company key={indx} src={img} width={100} height={100} />
         ))}
       </Flex>
     </Box>

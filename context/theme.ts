@@ -1,6 +1,6 @@
 export const theme = {
-	dark: {},
-	light: {},
+  dark: {},
+  light: {},
 };
 
 export type ThemeType = "DARK" | "LIGHT";

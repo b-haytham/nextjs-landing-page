@@ -9,8 +9,8 @@ interface AnimatedContactIconsProps {
 const item = {
   visible: (i: number) => ({
     opacity: 1,
-    scale: [0.8 ,1.5, 1],
-    color: ['#1a202c' ,'#ffd700', '#1a202c'],
+    scale: [0.8, 1.5, 1],
+    color: ["#1a202c", "#ffd700", "#1a202c"],
     transition: {
       delay: i * 0.8,
     },

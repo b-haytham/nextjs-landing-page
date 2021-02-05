@@ -16,7 +16,7 @@ const Landing: React.FC<LandingProps> = ({}) => {
   const { theme } = useContext(ThemeContext);
   return (
     <Flex
-      bgColor="black"
+      bgColor={theme === "DARK" && "black"}
       flexDirection={!isGreaterThan ? "column-reverse" : "row"}
       minHeight="calc(100vh - 60px)"
       justifyContent="center"
@@ -88,19 +88,23 @@ const Landing: React.FC<LandingProps> = ({}) => {
         alignSelf="center"
       >
         <AnimatedListItem indx={0.5}>
-        <motion.div
-          animate={{
-            y: [-10, 10],
-          }}
-          transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
-        >
-          <Player
-            autoplay
-            loop
-            src="/mobile-technology-animation.json"
-            style={{ height: "500px" }}
-          />
-        </motion.div>
+          <motion.div
+            animate={{
+              y: [-10, 10],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          >
+            <Player
+              autoplay
+              loop
+              src="/mobile-technology-animation.json"
+              style={{ height: "500px" }}
+            />
+          </motion.div>
         </AnimatedListItem>
       </Box>
     </Flex>

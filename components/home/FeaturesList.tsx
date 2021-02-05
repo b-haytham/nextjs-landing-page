@@ -22,16 +22,14 @@ const FeatureList: React.FC<FeatureListProps> = ({}) => {
 
       <Flex flexDirection={"column"} alignItems="center" marginTop={20}>
         {features.map((f, indx) => (
-          
-            <Feature
-              key={indx}
-              imageSrc={f}
-              title={`Feature ${indx + 1}`}
-              description={`Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          <Feature
+            key={indx}
+            imageSrc={f}
+            title={`Feature ${indx + 1}`}
+            description={`Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 							Facilis, eius!Lorem, ipsum dolor sit amet consectetur
 							adipisiit amet consectetur adipisicing elit. Facilis, eius`}
-            />
-          
+          />
         ))}
       </Flex>
     </Box>

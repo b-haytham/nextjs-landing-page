@@ -12,7 +12,7 @@ interface PricingListProps {
 
 const PricingList: React.FC<PricingListProps> = ({ showTitle, animate }) => {
   const { theme } = useContext(ThemeContext);
-  const isGreaterThan = useGreaterThan(1000)
+  const isGreaterThan = useGreaterThan(1000);
   return (
     <Box>
       {showTitle && (
@@ -31,7 +31,7 @@ const PricingList: React.FC<PricingListProps> = ({ showTitle, animate }) => {
         justifyContent="space-evenly"
         wrap="wrap"
       >
-        {(isGreaterThan) ? (
+        {isGreaterThan ? (
           <>
             <AnimatedListCard indx={0.5}>
               <PricingCard
