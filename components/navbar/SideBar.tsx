@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import useWindowScroll from "@react-hook/window-scroll";
+import React from "react";
 import { fallDown as Menu } from "react-burger-menu";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { ThemeType } from "../../context/theme";
-import { ThemeContext } from "../../context/ThemeContext";
 
 import ActiveLink from "./ActiveNavLink";
 
@@ -13,11 +13,11 @@ interface SideBarProps {
 }
 
 const SideBar: React.FC<SideBarProps> = ({ theme }) => {
-  console.log(theme);
-
+  const scrollY = useWindowScroll()
+  console.log(scrollY)
   return (
     <Menu
-      styles={{ bmMenu: { backgroundColor: theme === "DARK" && "black" } }}
+      styles={{ bmMenu: { backgroundColor: theme === "DARK" && "black" }, bmBurgerButton: {display: scrollY > 70 && 'none'} }}
       right
       pageWrapId="page-wrap"
       outerContainerId="outer-container"

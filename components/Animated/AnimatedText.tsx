@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useMemo } from "react";
 
 import { useInView } from "react-intersection-observer";
-import LazyMount from "react-lazy-mount";
+
 
 interface AnimatedTextProps {
   componentName?: string;

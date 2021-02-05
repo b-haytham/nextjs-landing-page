@@ -13,16 +13,9 @@ const Company: React.FC<CompanyProps & ImageProps> = ({
     <motion.div 
       style={{margin: 30}}
       whileHover={{
-        rotateX: [-60, 60, -60],
-        rotate: 360,
-        scale: [1, 1.2, 1],
-        transition: {
-          repeatType: "reverse",
-          repeat: Infinity,
-        },
+        scale: 1.3
       }}
       whileTap={{
-        rotateX: 0,
         rotate: 0,
         scale: 0.7,
         transition: {
