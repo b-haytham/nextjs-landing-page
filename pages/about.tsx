@@ -4,10 +4,8 @@ import {
   Flex,
   Heading,
   Text,
-  useMediaQuery,
 } from "@chakra-ui/react";
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import AnimatedText from "../components/Animated/AnimatedText";
 
 import Carousel from "../components/Carousel";
@@ -55,7 +53,7 @@ const about = () => {
         <AnimatedText >
           <Flex justifyContent="center" alignItems="center" paddingBottom={100}>
             <Divider w={50} borderColor="#ffd700" borderWidth={1.3} />
-            <Text fontFamily="Roboto" fontWeight="bolder" mx={isGreaterThan ? 10: 2}>
+            <Text color={theme === 'DARK' && '#505c75' } fontFamily="Roboto" fontWeight="bolder" mx={isGreaterThan ? 10: 2}>
               Our Story
             </Text>
             <Divider w={50} borderColor="#ffd700" borderWidth={1.3} />

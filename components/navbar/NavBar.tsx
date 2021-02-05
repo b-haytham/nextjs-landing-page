@@ -36,8 +36,9 @@ const NavBar: React.FC<NavBarProps> = ({}) => {
             style={{ marginRight: isGreaterThan ? 35 : 70 }}
             whileHover={{ scale: 1.2, color: "#ffd700" }}
             whileTap={{scale: 0.8, color: "#ffd700"}}
+            
           >
-            <BsSun fontSize="2rem" />
+            <BsSun color={theme === 'DARK' && '#505c75'} fontSize="2rem" />
           </motion.div>
         ) : (
           <motion.div

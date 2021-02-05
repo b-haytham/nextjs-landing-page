@@ -21,7 +21,7 @@ const SideBar: React.FC<SideBarProps> = ({ theme }) => {
     <Menu
       styles={{
         bmMenu: { backgroundColor: theme === "DARK" && "black" },
-        bmBurgerButton: { display: scrollY > 70 && "none" },
+        bmBurgerButton: { display: scrollY > 0 && "none" },
       }}
       right
       pageWrapId="page-wrap"
