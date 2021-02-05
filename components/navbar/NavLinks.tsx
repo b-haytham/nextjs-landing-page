@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Tooltip } from "@chakra-ui/react";
 import AnimatedListItem from "../Animated/AnimatedListItem";
 import ActiveLink from "./ActiveNavLink";
 
@@ -13,9 +13,11 @@ const NavLinks: React.FC<NavLinksProps> = ({}) => {
         </ActiveLink>
       </AnimatedListItem>
       <AnimatedListItem indx={0.1}>
-        <ActiveLink href="/learn-more" activeClassName="nav-link-active">
-          <a className="nv-link">Learn more</a>
-        </ActiveLink>
+        <Tooltip label='Not implemented yet' bgColor='#c4302b' hasArrow>
+          <div style={{ cursor: "pointer" }}>
+            <a className="nv-link">Learn more</a>
+          </div>
+        </Tooltip>
       </AnimatedListItem>
       <AnimatedListItem indx={0.2}>
         <ActiveLink href="/pricing" activeClassName="nav-link-active">
