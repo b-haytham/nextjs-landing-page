@@ -1,9 +1,10 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Tooltip } from "@chakra-ui/react";
 
 import { BsCodeSlash } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import { motion } from "framer-motion";
 
 interface MeComponentProps {
   isLanding?: boolean;
@@ -29,22 +30,35 @@ const MeComponent: React.FC<MeComponentProps> = ({ isLanding }) => {
       >
         This webside is built by `haytham boussarsar`{" "}
       </Text>
-      <a
-        href="https://github.com/b-haytham/nextjs-landing-page"
-        target="_blank"
-      >
-        <BsCodeSlash
-          fontSize="1.3rem"
-          color={theme === "DARK" ? "white" : "black"}
-          style={{ margin: "0 10px" }}
-        />
-      </a>
-      <a href="https://github.com/b-haytham" target="_blank">
-        <AiFillGithub
-          fontSize="1.3rem"
-          color={theme === "DARK" ? "white" : "black"}
-        />
-      </a>
+      <Tooltip label="Website source code">
+        <motion.a
+          href="https://github.com/b-haytham/nextjs-landing-page"
+          target="_blank"
+          whileHover={{
+            scale: 1.3,
+          }}
+        >
+          <BsCodeSlash
+            fontSize="1.3rem"
+            color={theme === "DARK" ? "white" : "black"}
+            style={{ margin: "0 10px" }}
+          />
+        </motion.a>
+      </Tooltip>
+      <Tooltip label="My Github Profile">
+        <motion.a 
+          href="https://github.com/b-haytham" 
+          target="_blank"
+          whileHover={{
+            scale: 1.3
+          }}
+        >
+          <AiFillGithub
+            fontSize="1.3rem"
+            color={theme === "DARK" ? "white" : "black"}
+          />
+        </motion.a>
+      </Tooltip>
     </Flex>
   );
 };
