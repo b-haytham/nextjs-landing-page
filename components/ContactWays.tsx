@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
 import { MdMail } from "react-icons/md";
@@ -6,17 +6,15 @@ import { TiLocation } from "react-icons/ti";
 import { FaPhone } from "react-icons/fa";
 import { FaAddressCard } from "react-icons/fa";
 import AnimatedContactIcons from "./Animated/AnimatedContactIcons";
+import useGreaterThan from "../utils/useGreaterThan";
 
 interface ContactWaysProps {}
 
 const ContactWays: React.FC<ContactWaysProps> = () => {
+  const isGreaterThan = useGreaterThan(764);
+
   return (
-    <Flex
-      padding="30px"
-      justifyContent="space-between"
-      alignItems="center"
-      wrap="wrap"
-    >
+    <SimpleGrid columns={isGreaterThan ? 4 : 2}>
       <AnimatedContactIcons indx={0}>
         <Flex
           flexDirection="column"
@@ -65,7 +63,7 @@ const ContactWays: React.FC<ContactWaysProps> = () => {
           <Text fontWeight="bolder">Email address</Text>
         </Flex>
       </AnimatedContactIcons>
-    </Flex>
+    </SimpleGrid>
   );
 };
 
