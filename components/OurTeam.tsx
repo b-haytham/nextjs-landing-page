@@ -34,6 +34,7 @@ const OurTeam: React.FC<OurTeamProps> = ({ isLoading, peoples }) => {
           {peoples &&
             peoples.map((p, indx) => (
               <Flex
+                key={indx}
                 flexDirection="column"
                 justifyContent="center"
                 alignItems="center"
