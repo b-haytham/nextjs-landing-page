@@ -1,8 +1,6 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
-import AnimatedListItem from "../Animated/AnimatedListItem";
-import AnimatedText, { MountLazy } from "../Animated/AnimatedText";
 import TestimonialCompononent from "./TestimonialCompononent";
 
 interface TestimonialsProps {}

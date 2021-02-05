@@ -1,8 +1,7 @@
 import { Button, Flex } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import { useHover } from "../utils/useIsHover";
 import AnimatedListItem from "./Animated/AnimatedListItem";
-import { MountLazy } from "./Animated/AnimatedText";
 
 interface GetStartedProps {}
 
