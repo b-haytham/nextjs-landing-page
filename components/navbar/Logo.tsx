@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface LogoProps {
@@ -15,11 +16,20 @@ const logoPath = (color?: "YELLOW" | "BLUE") => {
     return "/logo-blue.png";
   }
 };
+
 const Logo: React.FC<LogoProps> = ({ logoColor }) => {
   return (
-    <div>
+    <motion.div
+      whileHover={{
+        scale: [1, 1.2, 1],
+        transition: {
+          repeatType: "reverse",
+          repeat: Infinity,
+        },
+      }}
+    >
       <Image src={logoPath(logoColor)} width={50} height={50} />
-    </div>
+    </motion.div>
   );
 };
 
