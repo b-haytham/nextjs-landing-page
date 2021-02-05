@@ -13,11 +13,13 @@ import {
 import React, { useContext } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { ThemeContext } from "../context/ThemeContext";
+import useGreaterThan from "../utils/useGreaterThan";
 
 interface PricingTableProps {}
 
 const PricingTable: React.FC<PricingTableProps> = ({}) => {
   const { theme } = useContext(ThemeContext);
+  const isGreaterThan = useGreaterThan(764)
 
   return (
     <Box>
@@ -31,7 +33,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
         Pricing Table
       </Text>
 
-      <Box className="table-scroll-bar" px={20} pb={170} overflowX="scroll">
+      <Box className="table-scroll-bar" px={isGreaterThan ? 20 : 5} pb={170} overflowX="scroll">
         <Table minWidth="864px" colorScheme="orange">
           <Thead>
             <Tr>

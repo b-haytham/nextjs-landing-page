@@ -10,10 +10,10 @@ interface PricingListProps {
   animate?: boolean;
 }
 
-const gridColumn = (greaterThan764: boolean, greaterThan1400: boolean) => {
- if(greaterThan764 && !greaterThan1400) {
-   return 2 
- }else if(!greaterThan1400 && !greaterThan764) {
+const gridColumn = (greaterThan764: boolean, greaterThan1332: boolean) => {
+ if(greaterThan764 && !greaterThan1332) {
+   return 2
+ }else if(!greaterThan1332 && !greaterThan764) {
    return 1
  }else {
    return 4
@@ -25,10 +25,11 @@ const PricingList: React.FC<PricingListProps> = ({ showTitle, animate }) => {
   const isGreaterThan1000 = useGreaterThan(1000);
   const isGreaterThan1400 = useGreaterThan(1400);
   const isGreaterThan764 = useGreaterThan(764);
+  const isGreaterThan1332 = useGreaterThan(1332);
 
-  const getGridColumnNumber = useCallback((Than764: boolean, than1400)=> {
-    return gridColumn(Than764, than1400)
-  }, [isGreaterThan1400, isGreaterThan764])
+  const getGridColumnNumber = useCallback((Than764: boolean, than1332)=> {
+    return gridColumn(Than764, than1332)
+  }, [isGreaterThan1332, isGreaterThan764])
 
   return (
     <Box>
@@ -48,7 +49,7 @@ const PricingList: React.FC<PricingListProps> = ({ showTitle, animate }) => {
         justifyContent="space-evenly"
         wrap="wrap"
       > */}
-      <SimpleGrid columns={getGridColumnNumber(isGreaterThan764, isGreaterThan1400)} justifyItems='center'>
+      <SimpleGrid columns={getGridColumnNumber(isGreaterThan764, isGreaterThan1332)} justifyItems='center'>
         {isGreaterThan1000 ? (
           <>
             <AnimatedListCard minHeightPlaceholder={400} indx={0.2}>
@@ -77,7 +78,7 @@ const PricingList: React.FC<PricingListProps> = ({ showTitle, animate }) => {
             <AnimatedListCard minHeightPlaceholder={400} indx={0.7}>
               <PricingCard
                 planName="Custom"
-                planPrice={50}
+                planPrice={250}
                 features={["feature one", "feature two", "feature three"]}
               />
             </AnimatedListCard>
