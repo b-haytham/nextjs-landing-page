@@ -19,7 +19,7 @@ const Pricing = () => {
         justifyContent="center"
         marginBottom={50}
       >
-        <AnimatedText componentName="Pricing Title">
+        <AnimatedText minHeightPlaceholder={123} componentName="Pricing Title">
           <Heading
             marginY={10}
             textAlign="center"

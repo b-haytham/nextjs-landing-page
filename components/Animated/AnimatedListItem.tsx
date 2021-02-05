@@ -4,36 +4,9 @@ import { useInView } from "react-intersection-observer";
 
 interface AnimatedListProps {
   indx: number;
+  minHeightPlaceholder?: number 
 }
 
-const variants = {
-  hidden: {
-    y: -150,
-    opacity: 0,
-    scale: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    scale: 1,
-  },
-};
-
-const list = {
-  visible: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.8,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: "afterChildren",
-    },
-  },
-};
 
 const item = {
   visible: (i: number) => ({
@@ -45,7 +18,7 @@ const item = {
   hidden: { opacity: 0 },
 };
 
-const AnimatedListItem: React.FC<AnimatedListProps> = ({ children, indx }) => {
+const AnimatedListItem: React.FC<AnimatedListProps> = ({ children, indx, minHeightPlaceholder }) => {
   const controls = useAnimation();
   const { ref, inView, entry } = useInView({});
 
@@ -55,7 +28,7 @@ const AnimatedListItem: React.FC<AnimatedListProps> = ({ children, indx }) => {
 
   return (
     <div ref={ref}>
-      {inView && (
+      {inView ? (
         <motion.div
           custom={indx}
           layout
@@ -65,7 +38,7 @@ const AnimatedListItem: React.FC<AnimatedListProps> = ({ children, indx }) => {
         >
           {children}
         </motion.div>
-      )}
+      ) : <div style={{minHeight: minHeightPlaceholder}} />}
     </div>
   );
 };

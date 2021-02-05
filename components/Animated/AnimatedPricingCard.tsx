@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 interface AnimatedCardProps {
   indx: number;
+  minHeightPlaceholder?: number 
 }
 
 const item = {
@@ -17,7 +18,7 @@ const item = {
   hidden: { opacity: 0, scale: 0.5 },
 };
 
-const AnimatedListCard: React.FC<AnimatedCardProps> = ({ children, indx }) => {
+const AnimatedListCard: React.FC<AnimatedCardProps> = ({ children, indx, minHeightPlaceholder }) => {
   const controls = useAnimation();
   const { ref, inView, entry } = useInView({});
 
@@ -27,7 +28,7 @@ const AnimatedListCard: React.FC<AnimatedCardProps> = ({ children, indx }) => {
 
   return (
     <div ref={ref}>
-      {inView && (
+      {inView ? (
         <motion.div
           custom={indx}
           layout
@@ -37,7 +38,7 @@ const AnimatedListCard: React.FC<AnimatedCardProps> = ({ children, indx }) => {
         >
           {children}
         </motion.div>
-      )}
+      ) : <div style={{minHeight: minHeightPlaceholder}} />}
     </div>
   );
 };

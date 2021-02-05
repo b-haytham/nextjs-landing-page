@@ -29,7 +29,7 @@ const Landing: React.FC<LandingProps> = ({}) => {
           paddingLeft={!isGreaterThan ? 0 : 50}
         >
           <Box marginBottom={50}>
-            <AnimatedText componentName="Heading">
+            <AnimatedText minHeightPlaceholder={120} componentName="Heading">
               <Heading
                 bgGradient="linear(to-l, #ffc400, #277ecf)"
                 bgClip="text"
@@ -63,7 +63,7 @@ const Landing: React.FC<LandingProps> = ({}) => {
             </Text>
           </Box>
           <Flex justifyContent={isGreaterThan ? "start" : "center"}>
-            <AnimatedListItem indx={0}>
+            <AnimatedListItem minHeightPlaceholder={40} indx={0}>
               <Button
                 variant="outline"
                 colorScheme="#277ecf"
@@ -73,7 +73,7 @@ const Landing: React.FC<LandingProps> = ({}) => {
                 Learn More
               </Button>
             </AnimatedListItem>
-            <AnimatedListItem indx={1}>
+            <AnimatedListItem minHeightPlaceholder={40} indx={1}>
               <Button variant="outline" colorScheme="#FFD700" color="#FFD700">
                 Get Started
               </Button>
@@ -87,7 +87,7 @@ const Landing: React.FC<LandingProps> = ({}) => {
         borderBottomWidth={theme === "DARK" ? 0 : 1}
         alignSelf="center"
       >
-        <AnimatedListItem indx={0.5}>
+        <AnimatedListItem minHeightPlaceholder={500} indx={0.5}>
           <motion.div
             animate={{
               y: [-10, 10],

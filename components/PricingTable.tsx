@@ -39,8 +39,10 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               <Th color="#FFD700">Free Plan</Th>
               <Th color="#277ecf">Pro</Th>
               <Th color="#FFD700">Entreprise</Th>
+              <Th color="#FFD700">Custom</Th>
             </Tr>
           </Thead>
+          
           <Tbody>
             <Tr>
               <Td>lorem ipsum</Td>
@@ -54,9 +56,44 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
             </Tr>
             <Tr>
               <Td>lorem ipsum</Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
+
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>lorem ipsum</Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>lorem ipsum</Td>
+              <Td></Td>
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
@@ -76,13 +113,6 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
-            </Tr>
-            <Tr>
-              <Td>lorem ipsum</Td>
-              <Td></Td>
-              <Td>
-                <AiFillCheckCircle color="green" />
-              </Td>
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
@@ -96,6 +126,9 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
             </Tr>
             <Tr>
               <Td>lorem ipsum</Td>
@@ -104,9 +137,13 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
+              <Td>
+                <AiFillCheckCircle color="green" />
+              </Td>
             </Tr>
             <Tr>
               <Td>lorem ipsum</Td>
+              <Td></Td>
               <Td></Td>
               <Td></Td>
               <Td>
@@ -130,6 +167,15 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
                 <Button
                   variant="outline"
                   backgroundColor={"#277ecf"}
+                  color={"white"}
+                >
+                  Subscribe
+                </Button>
+              </Th>
+              <Th>
+                <Button
+                  variant="solid"
+                  backgroundColor={"#FFD700"}
                   color={"white"}
                 >
                   Subscribe

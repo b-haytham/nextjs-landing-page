@@ -25,10 +25,11 @@ const PricingCard: React.FC<PricingCardProps> = ({
     <ReactCardFlip
       containerStyle={{
         margin: "15px",
+        width: 300
       }}
       cardStyles={{
         front: {
-          minWidth: 300,
+          Width: 300,
           borderRadius: 20,
           border: !isPro ? "1px solid #FFD700" : "1px solid #277ecf",
           margin: "10px 0",
@@ -39,7 +40,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         },
         back: {
           backgroundColor: isPro ? "#277ecf" : "#FFD700",
-          nimWidth: 300,
+          Width: 300,
           borderRadius: 20,
           margin: "10px 0",
           boxShadow: !isPro
@@ -51,7 +52,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
       isFlipped={isFlipped}
       flipDirection="vertical"
     >
-      <Box key={1} minW={300}>
+      <Box key={1} w={300}>
         <Box bgColor={isPro ? "#277ecf" : "#FFD700"} h={10} />
         <Flex
           flexDirection="column"
@@ -102,7 +103,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         </Flex>
       </Box>
 
-      <Box key={2} minWidth={300}>
+      <Box key={2} w={300}>
         <Box h={10} />
         <Flex
           flexDirection="column"

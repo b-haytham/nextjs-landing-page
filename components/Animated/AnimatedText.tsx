@@ -8,6 +8,7 @@ interface AnimatedTextProps {
   componentName?: string;
   translateX?: boolean;
   basic?: boolean;
+  minHeightPlaceholder?: number 
 }
 
 const basicVariants = {
@@ -23,6 +24,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   children,
   translateX,
   basic,
+  minHeightPlaceholder
 }) => {
   const controls = useAnimation();
   const { ref, inView, entry } = useInView({});
@@ -50,7 +52,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 
   return (
     <div ref={ref}>
-      {inView && (
+      {inView ? (
         <motion.div
           variants={basic ? basicVariants : variants}
           initial="hidden"
@@ -58,7 +60,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
         >
           {children}
         </motion.div>
-      )}
+      ) : <div style={{minHeight: minHeightPlaceholder}} />}
     </div>
   );
 };

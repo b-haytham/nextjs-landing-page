@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 interface AnimatedContactIconsProps {
   indx: number;
+  minHeightPlaceholder?: number 
 }
 
 const item = {
@@ -21,6 +22,7 @@ const item = {
 const AnimatedContactIcons: React.FC<AnimatedContactIconsProps> = ({
   children,
   indx,
+  minHeightPlaceholder
 }) => {
   const controls = useAnimation();
   const { ref, inView, entry } = useInView({});
@@ -31,7 +33,7 @@ const AnimatedContactIcons: React.FC<AnimatedContactIconsProps> = ({
 
   return (
     <div ref={ref}>
-      {inView && (
+      {inView ? (
         <motion.div
           custom={indx}
           layout
@@ -41,7 +43,7 @@ const AnimatedContactIcons: React.FC<AnimatedContactIconsProps> = ({
         >
           {children}
         </motion.div>
-      )}
+      ) : <div style={{minHeight: minHeightPlaceholder}} />}
     </div>
   );
 };
