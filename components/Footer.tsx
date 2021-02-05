@@ -27,8 +27,8 @@ const Footer: React.FC<FooterProps> = () => {
         marginBottom={50}
         wrap="wrap"
       > */}
-      <SimpleGrid columns={isGreaterThan ? 4 : 2}   marginBottom={50}>
         <AnimatedListItem indx={0}>
+      <SimpleGrid columns={isGreaterThan ? 4 : 2}   marginBottom={50}>
           <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
             <Text
               color="#FFD700"
@@ -52,8 +52,6 @@ const Footer: React.FC<FooterProps> = () => {
               Lorem ipsum
             </Text>
           </Flex>
-        </AnimatedListItem>
-        <AnimatedListItem indx={0.05}>
           <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
             <Text
               color="#FFD700"
@@ -77,8 +75,6 @@ const Footer: React.FC<FooterProps> = () => {
               Lorem ipsum
             </Text>
           </Flex>
-        </AnimatedListItem>
-        <AnimatedListItem indx={0.1}>
           <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
             <Text
               color="#FFD700"
@@ -102,8 +98,6 @@ const Footer: React.FC<FooterProps> = () => {
               Lorem ipsum
             </Text>
           </Flex>
-        </AnimatedListItem>
-        <AnimatedListItem indx={0.15}>
           <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
             <Text
               color="#FFD700"
@@ -127,8 +121,6 @@ const Footer: React.FC<FooterProps> = () => {
               Lorem ipsum
             </Text>
           </Flex>
-        </AnimatedListItem>
-        <AnimatedListItem indx={0.2}>
           <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
             <Text
               color="#FFD700"
@@ -153,8 +145,6 @@ const Footer: React.FC<FooterProps> = () => {
               Lorem ipsum
             </Text>
           </Flex>
-        </AnimatedListItem>
-        <AnimatedListItem indx={0.25}>
           <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
             <Text
               color="#FFD700"
@@ -178,8 +168,8 @@ const Footer: React.FC<FooterProps> = () => {
               Lorem ipsum
             </Text>
           </Flex>
-        </AnimatedListItem>
         </SimpleGrid>
+        </AnimatedListItem>
       {/* </Flex> */}
       <AnimatedListItem indx={0.5}>
         <FooterBottomComponent />
