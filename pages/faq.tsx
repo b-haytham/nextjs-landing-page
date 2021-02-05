@@ -4,9 +4,11 @@ import { useContext } from "react";
 import FaqQ from "react-faq-component";
 import AnimatedText from "../components/Animated/AnimatedText";
 import { ThemeContext } from "../context/ThemeContext";
+import useGreaterThan from "../utils/useGreaterThan";
 
 const Faq = () => {
   const { theme } = useContext(ThemeContext);
+  const isGreaterThan764 = useGreaterThan(764)
 
   const styles = {
     bgColor: theme === "DARK" ? "black" : "white",
@@ -29,7 +31,7 @@ const Faq = () => {
           Frequently Asked Questions (FAQ)
         </Heading>
       </AnimatedText>
-      <Box minH="100vh" paddingX={20} paddingY={70}>
+      <Box minH="100vh" paddingX={isGreaterThan764 ? 20 : 5} paddingY={70}>
         <FaqQ data={data} styles={styles} />
       </Box>
     </Box>

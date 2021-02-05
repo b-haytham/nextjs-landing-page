@@ -43,7 +43,7 @@ const Contact = () => {
               fontFamily="Roboto"
               fontWeight="bolder"
               mx={isGreaterThan ? 10 : 20}
-              
+              color={theme === 'DARK' && '#505c75'}
             >
               Have a Question or Remark ? Send us a message
             </Text>

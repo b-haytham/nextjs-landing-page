@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) landing page example project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-#### demo ->> https://nextjs-landing-page-five.vercel.app/
+#### [Live demo](https://nextjs-landing-page-five.vercel.app/)  
 
 ## Getting Started
 

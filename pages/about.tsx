@@ -52,10 +52,10 @@ const about = () => {
       </AnimatedText>
 
       <Box minHeight="100vh">
-        <AnimatedText translateX>
+        <AnimatedText >
           <Flex justifyContent="center" alignItems="center" paddingBottom={100}>
             <Divider w={50} borderColor="#ffd700" borderWidth={1.3} />
-            <Text fontFamily="Roboto" fontWeight="bolder" mx={10}>
+            <Text fontFamily="Roboto" fontWeight="bolder" mx={isGreaterThan ? 10: 2}>
               Our Story
             </Text>
             <Divider w={50} borderColor="#ffd700" borderWidth={1.3} />
@@ -64,7 +64,7 @@ const about = () => {
         <Text
           fontFamily="Roboto"
           textAlign="justify"
-          paddingX={20}
+          paddingX={isGreaterThan ? 20 : 10}
           color={theme === "DARK" && "#757573"}
         >
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis,

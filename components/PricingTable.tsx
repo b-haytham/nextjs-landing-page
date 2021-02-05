@@ -45,7 +45,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
           
           <Tbody>
             <Tr>
-              <Td>lorem ipsum</Td>
+              <Td color={theme === 'DARK' && '#505c75'}>lorem ipsum</Td>
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
@@ -61,7 +61,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               </Td>
             </Tr>
             <Tr>
-              <Td>lorem ipsum</Td>
+              <Td color={theme === 'DARK' && '#505c75'}>lorem ipsum</Td>
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
@@ -77,7 +77,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               </Td>
             </Tr>
             <Tr>
-              <Td>lorem ipsum</Td>
+              <Td color={theme === 'DARK' && '#505c75'}>lorem ipsum</Td>
               <Td>
                 <AiFillCheckCircle color="green" />
               </Td>
@@ -92,7 +92,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               </Td>
             </Tr>
             <Tr>
-              <Td>lorem ipsum</Td>
+              <Td color={theme === 'DARK' && '#505c75'}>lorem ipsum</Td>
               <Td></Td>
               <Td>
                 <AiFillCheckCircle color="green" />
@@ -105,7 +105,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               </Td>
             </Tr>
             <Tr>
-              <Td>lorem ipsum</Td>
+              <Td color={theme === 'DARK' && '#505c75'}>lorem ipsum</Td>
               <Td></Td>
               <Td>
                 <AiFillCheckCircle color="green" />
@@ -118,7 +118,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               </Td>
             </Tr>
             <Tr>
-              <Td>lorem ipsum</Td>
+              <Td color={theme === 'DARK' && '#505c75'}>lorem ipsum</Td>
               <Td></Td>
               <Td>
                 <AiFillCheckCircle color="green" />
@@ -131,7 +131,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               </Td>
             </Tr>
             <Tr>
-              <Td>lorem ipsum</Td>
+              <Td color={theme === 'DARK' && '#505c75'}>lorem ipsum</Td>
               <Td></Td>
               <Td></Td>
               <Td>
@@ -142,7 +142,7 @@ const PricingTable: React.FC<PricingTableProps> = ({}) => {
               </Td>
             </Tr>
             <Tr>
-              <Td>lorem ipsum</Td>
+              <Td color={theme === 'DARK' && '#505c75'}>lorem ipsum</Td>
               <Td></Td>
               <Td></Td>
               <Td></Td>

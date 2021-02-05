@@ -28,7 +28,7 @@ const Pricing = () => {
             Pricing Guide
           </Heading>
         </AnimatedText>
-        <Text fontWeight={300} textAlign="center" maxW={300}>
+        <Text color={theme === 'DARK' && '#505c75'} fontWeight={300} textAlign="center" maxW={300}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
           placeat dolorem harum aliquam, nulla ad perf ?
         </Text>

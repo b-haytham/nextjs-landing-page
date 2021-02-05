@@ -70,7 +70,7 @@ const TestimonialCompononent: React.FC<TestimonialCompononentProps> = ({
         flex="2"
         padding={!isGreaterThan ? "20px 40px" : "0 100px 0 70px"}
       >
-        <Text fontFamily="Roboto, sans-serif" textAlign="justify">
+        <Text color={theme === 'DARK' && '#505c75'} fontFamily="Roboto, sans-serif" textAlign="justify">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis,
           eius!Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           Facilis, eius! Lorem, ipsum dolor sit amet consectetur adipisicing

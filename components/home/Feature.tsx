@@ -47,6 +47,7 @@ const Feature: React.FC<FeatureProps> = ({ title, description, imageSrc }) => {
           marginTop={5}
           fontFamily="Roboto, sans-serif"
           textAlign="justify"
+          color={theme === 'DARK' && '#505c75'}
         >
           {description}
         </Text>

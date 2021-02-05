@@ -56,6 +56,7 @@ const Landing: React.FC<LandingProps> = ({}) => {
               fontWeight="500"
               marginBottom={isGreaterThan ? 10 : 5}
               textAlign="justify"
+              color={theme === 'DARK' && '#505c75'}
             >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
               inventore ullam ab perspiciatis nesciunt assumenda dolores
