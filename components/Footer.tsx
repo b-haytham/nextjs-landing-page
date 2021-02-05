@@ -53,82 +53,82 @@ const Footer: React.FC<FooterProps> = () => {
             </Text>
           </Flex>
         </AnimatedListItem>
+        <AnimatedListItem indx={0.05}>
+          <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
+            <Text
+              color="#FFD700"
+              fontFamily="Roboto"
+              fontWeight="bold"
+              marginBottom={10}
+              fontSize="1.4rem"
+            >
+              Section
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+          </Flex>
+        </AnimatedListItem>
+        <AnimatedListItem indx={0.1}>
+          <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
+            <Text
+              color="#FFD700"
+              fontFamily="Roboto"
+              fontWeight="bold"
+              marginBottom={10}
+              fontSize="1.4rem"
+            >
+              Section
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+          </Flex>
+        </AnimatedListItem>
+        <AnimatedListItem indx={0.15}>
+          <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
+            <Text
+              color="#FFD700"
+              fontFamily="Roboto"
+              fontWeight="bold"
+              marginBottom={10}
+              fontSize="1.4rem"
+            >
+              Section
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
+              Lorem ipsum
+            </Text>
+          </Flex>
+        </AnimatedListItem>
         <AnimatedListItem indx={0.2}>
-          <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
-            <Text
-              color="#FFD700"
-              fontFamily="Roboto"
-              fontWeight="bold"
-              marginBottom={10}
-              fontSize="1.4rem"
-            >
-              Section
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-          </Flex>
-        </AnimatedListItem>
-        <AnimatedListItem indx={0.4}>
-          <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
-            <Text
-              color="#FFD700"
-              fontFamily="Roboto"
-              fontWeight="bold"
-              marginBottom={10}
-              fontSize="1.4rem"
-            >
-              Section
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-          </Flex>
-        </AnimatedListItem>
-        <AnimatedListItem indx={0.6}>
-          <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
-            <Text
-              color="#FFD700"
-              fontFamily="Roboto"
-              fontWeight="bold"
-              marginBottom={10}
-              fontSize="1.4rem"
-            >
-              Section
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-            <Text className="footer-link" cursor="pointer" fontFamily="Roboto">
-              Lorem ipsum
-            </Text>
-          </Flex>
-        </AnimatedListItem>
-        <AnimatedListItem indx={0.8}>
           <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
             <Text
               color="#FFD700"
@@ -154,7 +154,7 @@ const Footer: React.FC<FooterProps> = () => {
             </Text>
           </Flex>
         </AnimatedListItem>
-        <AnimatedListItem indx={1}>
+        <AnimatedListItem indx={0.25}>
           <Flex flexDirection="column" margin="10px 15px" alignItems={!isGreaterThan && 'center'}>
             <Text
               color="#FFD700"

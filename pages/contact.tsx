@@ -35,18 +35,19 @@ const Contact = () => {
             Contact Us
           </Heading>
         </AnimatedText>
-        <AnimatedText translateX>
-          <Flex justifyContent="center" alignItems="center" marginBottom={100}>
-            <Divider w={50} borderColor="#ffd700" borderWidth={1.3} />
+        <AnimatedText >
+          <Flex justifyContent="center" alignItems="center" marginBottom={isGreaterThan ? 100 : 50}>
+            {isGreaterThan && <Divider w={50} borderColor="#ffd700" borderWidth={1.3} />}
             <Text
               textAlign="center"
               fontFamily="Roboto"
               fontWeight="bolder"
-              mx={10}
+              mx={isGreaterThan ? 10 : 20}
+              
             >
               Have a Question or Remark ? Send us a message
             </Text>
-            <Divider w={50} borderColor="#ffd700" borderWidth={1.3} />
+            {isGreaterThan && <Divider w={50} borderColor="#ffd700" borderWidth={1.3} />}
           </Flex>
         </AnimatedText>
       </Flex>
