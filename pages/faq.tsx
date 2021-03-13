@@ -18,6 +18,7 @@ const Faq = () => {
     rowContentPaddingTop: "10px",
     rowContentPaddingBottom: "50px",
     rowContentPaddingLeft: "10px",
+    arrowColor: theme === 'DARK' ? 'white' : 'black'
   };
 
   return (

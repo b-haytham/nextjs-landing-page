@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import useGreaterThan from "../../utils/useGreaterThan";
+import AnimatedComponent from "../Animated/AnimatedComponent";
 
 interface FeatureProps {
   imageSrc: string;
@@ -29,6 +30,7 @@ const Feature: React.FC<FeatureProps> = ({ title, description, imageSrc }) => {
           height={200}
         />
       </Flex>
+      <AnimatedComponent>
       <Flex
         flex="2"
         flexDirection="column"
@@ -36,6 +38,7 @@ const Feature: React.FC<FeatureProps> = ({ title, description, imageSrc }) => {
         alignItems={isGreaterThan ? "start" : "center"}
       >
         <Text
+          data-aos='fade-left'
           fontWeight="bolder"
           fontFamily="Roboto, sans-serif"
           color={theme === "DARK" && "#d1d1d1"}
@@ -52,6 +55,7 @@ const Feature: React.FC<FeatureProps> = ({ title, description, imageSrc }) => {
           {description}
         </Text>
       </Flex>
+      </AnimatedComponent>
     </Flex>
   );
 };
